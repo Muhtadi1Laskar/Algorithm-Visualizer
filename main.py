@@ -141,6 +141,26 @@ def selection_sort(draw_info, asending=True):
             
     return lst
 
+def gnome_sort(draw_info, ascending=True):
+    lst = draw_info.lst
+    index = 0
+
+    while index < len(lst):
+        if index == 0:
+            index += 1
+        elif lst[index] >= lst[index-1]:
+            index += 1
+        else:
+            temp = lst[index]
+            lst[index] = lst[index-1]
+            lst[index-1] = temp
+
+            index -= 1
+
+            draw_list(draw_info, {index: draw_info.GREEN, index-1: draw_info.RED}, True)
+            yield True
+    return lst
+
 
 def insertion_sort(draw_info, ascending=True):
     lst = draw_info.lst
@@ -205,7 +225,7 @@ def main():
     run = True
     clock = pygame.time.Clock()
 
-    n = 2000
+    n = 50
     min_val = 0
     max_val = 100
 
@@ -259,6 +279,9 @@ def main():
             elif event.key == pygame.K_h and not sorting:
                 sorting_algorithm = heapSort
                 sorting_algo_name = "Heap Sort"
+            elif event.key == pygame.K_g and not sorting:
+                sorting_algorithm = gnome_sort
+                sorting_algo_name = "Gnome Sort"
 
     pygame.quit()
 
