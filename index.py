@@ -7,4 +7,3 @@ for i in range(0, 11, 2):
     print(i ** 2)
 
 print(2 * 3)
-
