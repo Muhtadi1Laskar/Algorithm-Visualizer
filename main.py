@@ -10,7 +10,6 @@ class DrawInformation:
     GREEN = 0, 255, 0
     RED = 255, 0, 0
     BACKGROUND_COLOR = WHITE
-
     
     GRADIENTS = [(128, 128, 128), (160, 160, 160), (192, 192, 192)]
 
