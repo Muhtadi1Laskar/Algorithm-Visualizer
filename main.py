@@ -12,7 +12,6 @@ class DrawInformation:
     BACKGROUND_COLOR = WHITE
 
     
-
     GRADIENTS = [(128, 128, 128), (160, 160, 160), (192, 192, 192)]
 
     FONT = pygame.font.SysFont("comicsans", 30)
