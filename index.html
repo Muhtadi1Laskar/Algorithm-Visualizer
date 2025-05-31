@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithm Visualizer</title>
-    <link rel="stylesheet" href="CSS/main.css">
-</head>
-<body>
-    Hello World
-    <script type="module" src="JS/main.js"></script>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Sorting Visualizer</title>
+        <link rel="stylesheet" href="CSS/main.css">
+    </head>
+
+    <body>
+        <h1>Sorting Visualizer</h1>
+        <select id="algo-select">
+            <option value="bubble">Bubble Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+        </select>
+        <button id="reset-btn">Reset</button>
+        <button id="sort-btn">Sort</button>
+
+        <div id="container"></div>
+
+        <script type="module" src="JS/main.js"></script>
+    </body>
+
 </html>

@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.bar {
+    width: 20px;
+    margin: 0 2px;
+    background-color: #3498db;
+    transition: height 0.2s, background-color 0.2s;
+}
+
+.highlight {
+    background-color: red !important;
+}
