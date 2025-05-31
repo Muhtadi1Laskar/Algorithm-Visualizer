@@ -56,20 +56,20 @@ A sleek and minimal web-based sorting algorithm visualizer built with HTML, CSS,
 
 ## 🕹 How to Use
 
-1. Clone the repository:
+    1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/sorting-visualizer.git
-   cd sorting-visualizer
-   ```
+        ```bash
+        git clone https://github.com/your-username/sorting-visualizer.git
+        cd sorting-visualizer
+        ```
 
-2. Open index.html in your browser.
+    2. Open index.html in your browser.
 
-3. Choose an algorithm from the dropdown.
+    3. Choose an algorithm from the dropdown.
 
-4. Click Sort to see the animation.
+    4. Click Sort to see the animation.
 
-5. Use Reset to generate a new unsorted array.
+    5. Use Reset to generate a new unsorted array.
 
 
 🧠 Learning Goals
