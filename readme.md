@@ -2,10 +2,6 @@
 
 A sleek and minimal web-based sorting algorithm visualizer built with HTML, CSS, and JavaScript. This project helps users understand how sorting algorithms work step-by-step through intuitive animations.
 
-![Sorting Visualizer Screenshot](screenshot.png) <!-- Replace with your actual image path -->
-
----
-
 ## ✨ Features
 
 - 🔄 Visualize popular sorting algorithms in real time  
