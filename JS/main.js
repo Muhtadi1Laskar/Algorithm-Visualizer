@@ -3,7 +3,7 @@ const resetButton = document.getElementById("reset-btn");
 const playButton = document.getElementById("sort-btn");
 const algoSelect = document.getElementById("algo-select");
 
-const n = 30;
+const n = 200;
 const array = [];
 
 let isSorting = false;
@@ -44,11 +44,17 @@ function play() {
         case "bubble":
             moves = bubbleSort(copy);
             break;
+        case "selection":
+            moves = selectionSort(copy);
+            break;
         case "insertion":
             moves = insertionSort(copy);
             break;
         case "merge":
             moves = mergeSort(copy);
+            break;
+        case "quick":
+            moves = quickSort(copy);
             break;
     }
 
@@ -75,7 +81,7 @@ function animateMoves(moves) {
         renderBars([move.index]);
     }
 
-    currentTimeout = setTimeout(() => animateMoves(moves), 70);
+    currentTimeout = setTimeout(() => animateMoves(moves), 20);
 }
 
 function bubbleSort(arr) {
@@ -92,6 +98,26 @@ function bubbleSort(arr) {
             }
         }
     } while (swapped);
+    return moves;
+}
+
+function selectionSort(arr) {
+    const moves = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let min = i;
+
+        for (let j = i + 1; j < arr.length; j++) {
+            moves.push({ type: "comp", indices: [min, j] });
+            if (arr[min] > arr[j]) {
+                min = j;
+            }
+        }
+        if (min !== i) {
+            [arr[i], arr[min]] = [arr[min], arr[i]];
+            moves.push({ type: "swap", indices: [i, min] });
+        }
+    }
     return moves;
 }
 
