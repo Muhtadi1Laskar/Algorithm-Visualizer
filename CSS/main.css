@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: sans-serif;
     text-align: center;
 }
@@ -20,4 +20,80 @@ body {
 
 .highlight {
     background-color: red !important;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #444;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+select,
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+select:hover {
+  background-color: #eaeaea;
+}
+
+#container {
+  display: flex;
+  align-items: flex-end;
+  height: 300px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.bar {
+  flex: 1;
+  margin: 0 2px;
+  background: #4caf50;
+  transition: height 0.3s, background-color 0.2s;
+  border-radius: 2px;
+}
+
+.bar.red {
+  background-color: #e74c3c !important;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
 }

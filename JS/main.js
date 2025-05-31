@@ -27,18 +27,17 @@ function init() {
     renderBars();
 }
 
-function renderBars(indices = []) {
-    container.innerHTML = "";
-    for (let i = 0; i < array.length; i++) {
-        const bar = document.createElement("div");
-        bar.classList.add("bar");
-        bar.style.height = `${array[i] * 100}%`;
-        if (indices.includes(i)) {
-            bar.classList.add("highlight");
-        }
-        container.appendChild(bar);
-    }
+function renderBars(highlighted = []) {
+  container.innerHTML = '';
+  for (let i = 0; i < array.length; i++) {
+    const bar = document.createElement("div");
+    bar.style.height = array[i] * 100 + "%";
+    bar.className = "bar";
+    if (highlighted.includes(i)) bar.classList.add("red");
+    container.appendChild(bar);
+  }
 }
+
 
 function play() {
     if (isSorting) return;
@@ -89,7 +88,7 @@ function animateMoves(moves) {
         renderBars([move.index]);
     }
 
-    currentTimeout = setTimeout(() => animateMoves(moves), 20);
+    currentTimeout = setTimeout(() => animateMoves(moves), 10);
 }
 
 resetButton.addEventListener("click", init);

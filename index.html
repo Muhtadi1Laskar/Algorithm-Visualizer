@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="CSS/main.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Sorting Visualizer</h1>
+    </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Sorting Visualizer</title>
-        <link rel="stylesheet" href="CSS/main.css">
-    </head>
+    <div class="controls">
+      <select id="algo-select">
+        <option value="bubble">Bubble Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="merge">Merge Sort</option>
+      </select>
+      <button id="reset-btn">Reset</button>
+      <button id="sort-btn">Sort</button>
+    </div>
 
-    <body>
-        <h1>Sorting Visualizer</h1>
-        <select id="algo-select">
-            <option value="bubble">Bubble Sort</option>
-            <option value="selection">Selection Sort</option>
-            <option value="insertion">Insertion Sort</option>
-            <option value="merge">Merge Sort</option>
-            <option value="quick">Quick Sort</option>
-        </select>
-        <button id="reset-btn">Reset</button>
-        <button id="sort-btn">Sort</button>
+    <div id="container" class="bars"></div>
 
-        <div id="container"></div>
+    <footer>
+      <p>Built with ❤️ using HTML, CSS, and JS</p>
+    </footer>
+  </div>
 
-        <script type="module" src="JS/main.js"></script>
-    </body>
-
+  <script type="module" src="JS/main.js"></script>
+</body>
 </html>
