@@ -1,9 +1,11 @@
+import {bubbleSort} from '../Algorithms/Sorting/bubbleSort.js';
+
 const container = document.getElementById("container");
 const resetButton = document.getElementById("reset-btn");
 const playButton = document.getElementById("sort-btn");
 const algoSelect = document.getElementById("algo-select");
 
-const n = 200;
+const n = 50;
 const array = [];
 
 let isSorting = false;
@@ -82,23 +84,6 @@ function animateMoves(moves) {
     }
 
     currentTimeout = setTimeout(() => animateMoves(moves), 20);
-}
-
-function bubbleSort(arr) {
-    const moves = [];
-    let swapped;
-    do {
-        swapped = false;
-        for (let i = 1; i < arr.length; i++) {
-            moves.push({ type: "comp", indices: [i - 1, i] });
-            if (arr[i - 1] > arr[i]) {
-                [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
-                moves.push({ type: "swap", indices: [i - 1, i] });
-                swapped = true;
-            }
-        }
-    } while (swapped);
-    return moves;
 }
 
 function selectionSort(arr) {
