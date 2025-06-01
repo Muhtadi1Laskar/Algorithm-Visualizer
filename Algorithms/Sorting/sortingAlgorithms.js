@@ -1,4 +1,5 @@
 import { bubbleSort } from "./bubbleSort.js";
+import { combSort } from "./combsort.js";
 import { gnomeSort } from "./gnomeSort.js";
 import { insertionSort } from "./insetionSort.js";
 import { mergeSort } from "./mergeSort.js";
@@ -11,5 +12,6 @@ export {
     insertionSort,
     mergeSort,
     quickSort,
-    gnomeSort
+    gnomeSort,
+    combSort
 };
