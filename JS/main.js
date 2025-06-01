@@ -3,7 +3,8 @@ import {
     selectionSort,
     insertionSort,
     mergeSort,
-    quickSort
+    quickSort,
+    gnomeSort
 } from '../Algorithms/Sorting/sortingAlgorithms.js';
 
 const container = document.getElementById("container");
@@ -62,6 +63,9 @@ function play() {
             break;
         case "quick":
             moves = quickSort(copy);
+            break;
+        case "gnome":
+            moves = gnomeSort(copy);
             break;
     }
 
