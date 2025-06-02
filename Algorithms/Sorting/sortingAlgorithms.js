@@ -6,6 +6,7 @@ import { mergeSort } from "./mergeSort.js";
 import { oddEvenSort } from "./oddEvenSort.js";
 import { quickSort } from "./quickSort.js";
 import { selectionSort } from "./selectionSort.js";
+import { shuttleSort } from "./shuttleSort.js";
 
 export {
     bubbleSort,
@@ -15,5 +16,6 @@ export {
     quickSort,
     gnomeSort,
     combSort,
-    oddEvenSort
+    oddEvenSort,
+    shuttleSort
 };

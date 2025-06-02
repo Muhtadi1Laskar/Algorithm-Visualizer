@@ -6,7 +6,8 @@ import {
     quickSort,
     gnomeSort,
     combSort,
-    oddEvenSort
+    oddEvenSort,
+    shuttleSort
 } from '../Algorithms/Sorting/sortingAlgorithms.js';
 
 const container = document.getElementById("container");
@@ -24,19 +25,16 @@ let isSorting = false;
 let currentTimeout = null;
 
 
-
 function setTheme(dark) {
     document.body.classList.toggle("dark", dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
     themeButton.textContent = dark ? "☀️ Light Mode" : "🌙 Dark Mode";
 }
 
-// Load saved preference
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") setTheme(true);
-
-// Toggle theme on click
-
+if (savedTheme === "dark") {
+    setTheme(true);
+}
 
 
 function init() {
@@ -101,6 +99,9 @@ function play() {
         case "odd-even":
             moves = oddEvenSort(copy);
             break;
+        case "shuttle":
+            moves = shuttleSort(copy);
+            break;
     }
 
     animateMoves(moves);
@@ -140,6 +141,7 @@ sortNumbers.addEventListener("change", init);
 playButton.addEventListener("click", play);
 themeButton.addEventListener("click", () => {
     const isDark = document.body.classList.contains("dark");
+    console.log(isDark);
     setTheme(!isDark);
 });
 
