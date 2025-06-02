@@ -5,7 +5,8 @@ import {
     mergeSort,
     quickSort,
     gnomeSort,
-    combSort
+    combSort,
+    oddEvenSort
 } from '../Algorithms/Sorting/sortingAlgorithms.js';
 
 const container = document.getElementById("container");
@@ -70,6 +71,9 @@ function play() {
             break;
         case "comb":
             moves = combSort(copy);
+            break;
+        case "odd-even":
+            moves = oddEvenSort(copy);
             break;
     }
 
