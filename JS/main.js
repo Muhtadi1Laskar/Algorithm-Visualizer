@@ -14,14 +14,38 @@ const resetButton = document.getElementById("reset-btn");
 const playButton = document.getElementById("sort-btn");
 const algoSelect = document.getElementById("algo-select");
 const speedSelect = document.getElementById("speed-select");
+const sortNumbers = document.getElementById("sorting-number");
+const themeButton = document.getElementById("toggle-theme");
 
-const n = 50;
+const n = +sortNumbers.value || 10;
 const array = [];
 
 let isSorting = false;
 let currentTimeout = null;
 
+
+
+function setTheme(dark) {
+    document.body.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
+    themeButton.textContent = dark ? "☀️ Light Mode" : "🌙 Dark Mode";
+}
+
+// Load saved preference
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") setTheme(true);
+
+// Toggle theme on click
+
+
+
 function init() {
+    let n = +sortNumbers.value;
+
+    if(isNaN(n) || n < 5 || n > 200) {
+        n = 50;
+    }
+
     isSorting = false;
     clearTimeout(currentTimeout);
     array.length = 0;
@@ -104,13 +128,19 @@ function animateMoves(moves) {
         renderBars([move.index]);
     }
 
-    currentTimeout = setTimeout(() => animateMoves(moves), 0.5);
+    currentTimeout = setTimeout(() => animateMoves(moves), speed);
 }
 
 
 resetButton.addEventListener("click", init);
 algoSelect.addEventListener("change", init);
-speedSelect.addEventListener("change", init)
+speedSelect.addEventListener("change", init);
+sortNumbers.addEventListener("keyup", init);
+sortNumbers.addEventListener("change", init);
 playButton.addEventListener("click", play);
+themeButton.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark");
+    setTheme(!isDark);
+});
 
 init();

@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sorting Algorithm Visualizer</title>
-  <link rel="stylesheet" href="CSS/main.css" />
-</head>
-<body>
-  <div class="app">
-    <header>
-      <h1>Sorting Visualizer</h1>
-    </header>
 
-    <div class="controls">
-      <select id="algo-select">
-        <option value="bubble">Bubble Sort</option>
-        <option value="insertion">Insertion Sort</option>
-        <option value="selection">Selection Sort</option>
-        <option value="quick">Quick Sort</option>
-        <option value="merge">Merge Sort</option>
-        <option value="gnome">Gnome Sort</option>
-        <option value="comb">Comb Sort</option>
-        <option value="odd-even">Odd-Even Sort</option>
-      </select>
-      <select name="speed" id="speed-select">
-        <option value="">Select Speed</option>
-        <option value="0.5">0.5 frame per rate</option>
-        <option value="5">5 frame per rate</option>
-        <option value="20">20 frame per rate</option>
-        <option value="50">50 frame per rate</option>
-        <option value="100">100 frame per rate</option>
-      </select>
-      <button id="reset-btn">Reset</button>
-      <button id="sort-btn">Sort</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header>
+        <h1>Sorting Visualizer</h1>
+      </header>
+
+      <div class="controls">
+        <select id="algo-select">
+          <option value="bubble">Bubble Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="quick">Quick Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="gnome">Gnome Sort</option>
+          <option value="comb">Comb Sort</option>
+          <option value="odd-even">Odd-Even Sort</option>
+        </select>
+        <select name="speed" id="speed-select">
+          <option value="">Select Speed</option>
+          <option value="0.5">0.5 frame per rate</option>
+          <option value="5">5 frame per rate</option>
+          <option value="20">20 frame per rate</option>
+          <option value="50">50 frame per rate</option>
+          <option value="100">100 frame per rate</option>
+        </select>
+        <input placeholder="Sorting Numbers" id="sorting-number" class="sorting-number" type="number" max="200"
+          min="5" />
+        <button id="reset-btn">Reset</button>
+        <button id="sort-btn">Sort</button>
+        <div class="theme-toggle">
+          <button id="toggle-theme">🌙 Dark Mode</button>
+        </div>
+      </div>
+
+      <div id="container" class="bars"></div>
+      <div class="code" id="code">
+        <code>
+      </code>
+      </div>
+      <footer>
+        <p>Built with ❤️ using HTML, CSS, and JS</p>
+      </footer>
     </div>
 
-    <div id="container" class="bars"></div>
+    <script type="module" src="JS/main.js"></script>
+  </body>
 
-    <footer>
-      <p>Built with ❤️ using HTML, CSS, and JS</p>
-    </footer>
-  </div>
-
-  <script type="module" src="JS/main.js"></script>
-</body>
 </html>

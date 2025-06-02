@@ -1,126 +1,211 @@
-/* body {
-    font-family: sans-serif;
-    text-align: center;
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-#container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 300px;
-    margin: 20px auto;
-}
-
-.bar {
-    width: 20px;
-    margin: 0 2px;
-    background-color: #3498db;
-    transition: height 0.2s, background-color 0.2s;
-}
-
-.highlight {
-    background-color: red !important;
-} */
 
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
   color: #333;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
+/* App Container */
 .app {
-  max-width: 900px;
+  max-width: 960px;
   width: 100%;
   padding: 20px;
   text-align: center;
 }
 
+/* Header */
 header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #444;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Controls */
 .controls {
-  margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs & Buttons */
+select,
+button,
+.sorting-number {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: all 0.25s ease;
 }
 
 select,
+.sorting-number {
+  background: #ffffff;
+  border: 2px solid #ccc;
+}
+
 button {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  background: #0077ff;
+  color: white;
+  font-weight: 600;
   cursor: pointer;
-  background-color: white;
-  transition: all 0.2s ease;
 }
 
-button:hover,
-select:hover {
-  background-color: #eaeaea;
+button:hover {
+  background: #005fd4;
 }
 
+button:active {
+  transform: scale(0.97);
+}
+
+/* Sorting Number Input */
+.sorting-number {
+  width: 160px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sorting-number:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Bars Container */
 #container {
   display: flex;
   align-items: flex-end;
-  height: 300px;
+  height: 320px;
   margin: 30px auto;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 4px;
-  overflow: hidden;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
   padding: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
+/* Bar Styling */
 .bar {
   flex: 1;
   margin: 0 2px;
-  background: #4caf50;
+  background: #00BFA6; /* Default: Calm teal */
   transition: height 0.3s, background-color 0.2s;
   border-radius: 2px;
 }
 
-.bar.red {
-  background-color: #e74c3c !important;
-}
-
-.bar.red {
-    background-color: #e74c3c;
-}
-
 .bar.blue {
-    background-color: #3498db;
+  background-color: #2979FF !important; /* Comparison */
+}
+
+.bar.red {
+  background-color: #F44336 !important; /* Swap */
 }
 
 .bar.green {
-    background-color: #2ecc71;
+  background-color: #4CAF50 !important; /* Sorted */
 }
 
-    select {
-      /* Style the select element itself */
-      /* ... */
-    }
-    select option:first-child {
-      /* Style the placeholder option */
-      color: #ccc; /* Or any color you prefer */
-      font-style: italic; /* Or any desired style */
-    }
-    select:focus {
-      /* Style the select element when it's focused */
-      outline: none; /* Optional, removes the default focus outline */
-    }
 
-
+/* Footer */
 footer {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 0.9rem;
-  color: #777;
+  color: #666;
+}
+
+/* Dark mode styles */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header h1 {
+  color: #f3f3f3;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark .controls {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark select,
+body.dark .sorting-number {
+  background: #1e1e1e;
+  color: #eee;
+  border-color: #555;
+}
+
+body.dark button {
+  background: #333;
+  color: #f9f9f9;
+}
+
+body.dark button:hover {
+  background: #444;
+}
+
+body.dark #container {
+  background: #1a1a1a;
+  border-color: #333;
+}
+
+body.dark footer {
+  color: #999;
+}
+
+/* Theme Toggle Button */
+.theme-toggle button {
+  background: transparent;
+  border: 2px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark .theme-toggle button {
+  border-color: #666;
+  color: #eee;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sorting-number {
+    width: 100%;
+  }
+
+  #container {
+    height: 250px;
+  }
 }
