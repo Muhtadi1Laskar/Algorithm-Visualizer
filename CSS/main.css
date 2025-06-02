@@ -25,7 +25,7 @@ body {
 /* Header */
 header h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: #00BFA6;
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
@@ -196,8 +196,8 @@ body.dark .theme-toggle button {
 .code {
   margin-top: 30px;
   padding: 20px;
-  background-color: #1e1e2f; /* Dark background */
-  color: #f8f8f2; /* Light text for contrast */
+  background-color: #1e1e2f;
+  color: #f8f8f2;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   overflow-x: auto;
