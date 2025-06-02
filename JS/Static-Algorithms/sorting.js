@@ -1,6 +1,7 @@
 import { bubbleSort } from "./bubbleSort.js";
 import { combSort } from "./combSort.js";
 import { gnomeSort } from "./gnomeSort.js";
+import { heapify, heapSort } from "./heapSort.js";
 import { insertionSort } from "./insertionSort.js";
 import { mergeSort } from "./mergeSort.js";
 import { oddEvenSort } from "./oddEvenSort.js";
@@ -17,5 +18,6 @@ export const codeSnippets = {
   comb: `${combSort}`,
   'odd-even': `${oddEvenSort}`,
   gnome: `${gnomeSort}`,
-  shuttle: `${shuttleSort}`
+  shuttle: `${shuttleSort}`,
+  heap: `${heapSort} \n \n ${heapify}`
 };

@@ -7,7 +7,8 @@ import {
     gnomeSort,
     combSort,
     oddEvenSort,
-    shuttleSort
+    shuttleSort,
+    heapSort
 } from './Algorithms/Sorting/sortingAlgorithms.js';
 import { codeSnippets } from './Static-Algorithms/sorting.js';
 
@@ -104,6 +105,9 @@ function play() {
             break;
         case "shuttle":
             moves = shuttleSort(copy);
+            break;
+        case "heap":
+            moves = heapSort(copy);
             break;
     }
 

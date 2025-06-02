@@ -5,7 +5,7 @@ export function quickSort(arr) {
         if (low < high) {
             const pivotIndex = partition(arr, low, high);
             quickSortHelper(arr, low, pivotIndex - 1);
-            quickSortHelper(arr, pivotIndex + 1, highves);
+            quickSortHelper(arr, pivotIndex + 1, high);
         }
     }
 
@@ -23,7 +23,9 @@ export function quickSort(arr) {
         [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
         return i + 1;
     }
-    return moves;
+    return arr;
 }
 
 
+const array = [2, 3, 1, 666, 8, 43, 9, 43, 6];
+console.log(quickSort(array));
