@@ -9,6 +9,7 @@ import {
     oddEvenSort,
     shuttleSort
 } from '../Algorithms/Sorting/sortingAlgorithms.js';
+import { codeSnippets } from '../Static-Algorithms/sorting.js';
 
 const container = document.getElementById("container");
 const resetButton = document.getElementById("reset-btn");
@@ -17,6 +18,7 @@ const algoSelect = document.getElementById("algo-select");
 const speedSelect = document.getElementById("speed-select");
 const sortNumbers = document.getElementById("sorting-number");
 const themeButton = document.getElementById("toggle-theme");
+const codeBlock = document.getElementById("code-block");
 
 const n = +sortNumbers.value || 10;
 const array = [];
@@ -132,17 +134,27 @@ function animateMoves(moves) {
     currentTimeout = setTimeout(() => animateMoves(moves), speed);
 }
 
+const renderCode = () => {
+    const algo = algoSelect.value;
+    const result = codeSnippets[algo] || ' ';
+
+    codeBlock.textContent = result.trim();
+    Prism.highlightElement(codeBlock);
+}
+
+const toggleDarkTheme = () => {
+    const isDark = document.body.classList.contains("dark");
+    setTheme(!isDark);
+}
+
 
 resetButton.addEventListener("click", init);
 algoSelect.addEventListener("change", init);
+algoSelect.addEventListener("change", renderCode);
 speedSelect.addEventListener("change", init);
 sortNumbers.addEventListener("keyup", init);
 sortNumbers.addEventListener("change", init);
 playButton.addEventListener("click", play);
-themeButton.addEventListener("click", () => {
-    const isDark = document.body.classList.contains("dark");
-    console.log(isDark);
-    setTheme(!isDark);
-});
+themeButton.addEventListener("click", toggleDarkTheme);
 
 init();
