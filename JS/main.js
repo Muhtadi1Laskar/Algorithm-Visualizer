@@ -43,7 +43,7 @@ if (savedTheme === "dark") {
 function init() {
     let n = +sortNumbers.value;
 
-    if(isNaN(n) || n < 5 || n > 200) {
+    if (isNaN(n) || n < 5 || n > 200) {
         n = 50;
     }
 
