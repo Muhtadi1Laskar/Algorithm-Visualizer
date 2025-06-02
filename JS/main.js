@@ -18,6 +18,7 @@ const algoSelect = document.getElementById("algo-select");
 const speedSelect = document.getElementById("speed-select");
 const sortNumbers = document.getElementById("sorting-number");
 const themeButton = document.getElementById("toggle-theme");
+const codeDiv = document.getElementById("code");
 const codeBlock = document.getElementById("code-block");
 
 const n = +sortNumbers.value || 10;
@@ -56,7 +57,7 @@ function init() {
 }
 
 function renderBars(highlighted = [], color = 'red') {
-    console.log(highlighted);
+    container.style.visibility = "visible";
     container.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
         const bar = document.createElement("div");
@@ -139,6 +140,7 @@ const renderCode = () => {
     const result = codeSnippets[algo] || ' ';
 
     codeBlock.textContent = result.trim();
+    codeDiv.style.visibility = "visible";
     Prism.highlightElement(codeBlock);
 }
 
@@ -157,4 +159,4 @@ sortNumbers.addEventListener("change", init);
 playButton.addEventListener("click", play);
 themeButton.addEventListener("click", toggleDarkTheme);
 
-init();
+// init();

@@ -253,3 +253,23 @@ body.dark .theme-toggle button {
     height: 250px;
   }
 }
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    background-color: #e74c3c;
+  }
+  30% {
+    transform: translateY(-10px);
+    background-color: #f1948a;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #e74c3c;
+  }
+}
+
+.bar.red {
+  animation: bounce 0.3s ease;
+}

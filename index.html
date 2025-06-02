@@ -24,7 +24,8 @@
       </header>
 
       <div class="controls">
-        <select id="algo-select">
+        <select id="algo-select" required>
+          <option value="" disabled selected hidden>Algorithm</option>
           <option value="bubble">Bubble Sort</option>
           <option value="insertion">Insertion Sort</option>
           <option value="selection">Selection Sort</option>
@@ -52,9 +53,9 @@
         </div>
       </div>
 
-      <div id="container" class="bars"></div>
-      <div class="code" id="code">
-        <pre><code class="language-javascript" id="code-block"></code></pre>
+      <div id="container" class="bars" style="visibility: hidden;"></div>
+      <div class="code" id="code" style="visibility: hidden;">
+        <pre><code class="language-javascript" id="code-block" ></code></pre>
       </div>
       <footer>
         <p>Built with ❤️ using HTML, CSS, and JS</p>
