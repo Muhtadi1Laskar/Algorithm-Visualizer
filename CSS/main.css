@@ -236,6 +236,13 @@ body.dark .theme-toggle button {
   background-color: #555;
 }
 
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.bar {
+  transition: height 0.3s, background-color 0.3s, transform 0.3s;
+}
 
 
 /* Mobile Responsive */
