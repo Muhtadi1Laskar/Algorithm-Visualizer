@@ -8,8 +8,8 @@ import {
     combSort,
     oddEvenSort,
     shuttleSort
-} from '../Algorithms/Sorting/sortingAlgorithms.js';
-import { codeSnippets } from '../Static-Algorithms/sorting.js';
+} from './Algorithms/Sorting/sortingAlgorithms.js';
+import { codeSnippets } from './Static-Algorithms/sorting.js';
 
 const container = document.getElementById("container");
 const resetButton = document.getElementById("reset-btn");
