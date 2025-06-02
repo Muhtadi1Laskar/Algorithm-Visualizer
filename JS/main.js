@@ -13,6 +13,7 @@ const container = document.getElementById("container");
 const resetButton = document.getElementById("reset-btn");
 const playButton = document.getElementById("sort-btn");
 const algoSelect = document.getElementById("algo-select");
+const speedSelect = document.getElementById("speed-select");
 
 const n = 50;
 const array = [];
@@ -30,15 +31,16 @@ function init() {
     renderBars();
 }
 
-function renderBars(highlighted = []) {
-  container.innerHTML = '';
-  for (let i = 0; i < array.length; i++) {
-    const bar = document.createElement("div");
-    bar.style.height = array[i] * 100 + "%";
-    bar.className = "bar";
-    if (highlighted.includes(i)) bar.classList.add("red");
-    container.appendChild(bar);
-  }
+function renderBars(highlighted = [], color = 'red') {
+    console.log(highlighted);
+    container.innerHTML = '';
+    for (let i = 0; i < array.length; i++) {
+        const bar = document.createElement("div");
+        bar.style.height = array[i] * 100 + "%";
+        bar.className = "bar";
+        if (highlighted.includes(i)) bar.classList.add(color);
+        container.appendChild(bar);
+    }
 }
 
 
@@ -81,6 +83,8 @@ function play() {
 }
 
 function animateMoves(moves) {
+    const speed = +speedSelect.value;
+
     if (!isSorting || moves.length === 0) {
         renderBars();
         isSorting = false;
@@ -100,11 +104,13 @@ function animateMoves(moves) {
         renderBars([move.index]);
     }
 
-    currentTimeout = setTimeout(() => animateMoves(moves), 10);
+    currentTimeout = setTimeout(() => animateMoves(moves), 0.5);
 }
+
 
 resetButton.addEventListener("click", init);
 algoSelect.addEventListener("change", init);
+speedSelect.addEventListener("change", init)
 playButton.addEventListener("click", play);
 
 init();

@@ -92,6 +92,33 @@ select:hover {
   background-color: #e74c3c !important;
 }
 
+.bar.red {
+    background-color: #e74c3c;
+}
+
+.bar.blue {
+    background-color: #3498db;
+}
+
+.bar.green {
+    background-color: #2ecc71;
+}
+
+    select {
+      /* Style the select element itself */
+      /* ... */
+    }
+    select option:first-child {
+      /* Style the placeholder option */
+      color: #ccc; /* Or any color you prefer */
+      font-style: italic; /* Or any desired style */
+    }
+    select:focus {
+      /* Style the select element when it's focused */
+      outline: none; /* Optional, removes the default focus outline */
+    }
+
+
 footer {
   margin-top: 20px;
   font-size: 0.9rem;
