@@ -5,7 +5,7 @@ import { heapify, heapSort } from "./heapSort.js";
 import { insertionSort } from "./insertionSort.js";
 import { merge, mergeSort } from "./mergeSort.js";
 import { oddEvenSort } from "./oddEvenSort.js";
-import { quickSort } from "./quickSort.js";
+import { partition, quickSort, quickSortHelper } from "./quickSort.js";
 import { selectionSort } from "./selectionSort.js";
 import { shuttleSort } from "./shuttleSort.js";
 
@@ -14,7 +14,7 @@ export const codeSnippets = {
   selection: `${selectionSort}`,
   insertion: `${insertionSort}`,
   merge: `${merge} \n \n ${mergeSort}`,
-  quick: `${quickSort}`,
+  quick: `${quickSort} \n \n ${quickSortHelper} \n \n ${partition}`,
   comb: `${combSort}`,
   'odd-even': `${oddEvenSort}`,
   gnome: `${gnomeSort}`,
