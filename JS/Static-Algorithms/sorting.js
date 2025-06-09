@@ -3,7 +3,7 @@ import { combSort } from "./combSort.js";
 import { gnomeSort } from "./gnomeSort.js";
 import { heapify, heapSort } from "./heapSort.js";
 import { insertionSort } from "./insertionSort.js";
-import { mergeSort } from "./mergeSort.js";
+import { merge, mergeSort } from "./mergeSort.js";
 import { oddEvenSort } from "./oddEvenSort.js";
 import { quickSort } from "./quickSort.js";
 import { selectionSort } from "./selectionSort.js";
@@ -13,7 +13,7 @@ export const codeSnippets = {
   bubble: `${bubbleSort}`,
   selection: `${selectionSort}`,
   insertion: `${insertionSort}`,
-  merge: `${mergeSort}`,
+  merge: `${merge} \n \n ${mergeSort}`,
   quick: `${quickSort}`,
   comb: `${combSort}`,
   'odd-even': `${oddEvenSort}`,
