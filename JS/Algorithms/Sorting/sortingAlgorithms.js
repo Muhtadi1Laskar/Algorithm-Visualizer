@@ -8,6 +8,7 @@ import { oddEvenSort } from "./oddEvenSort.js";
 import { quickSort } from "./quickSort.js";
 import { selectionSort } from "./selectionSort.js";
 import { shuttleSort } from "./shuttleSort.js";
+import { timSort } from "./timSort.js";
 
 export {
     bubbleSort,
@@ -19,6 +20,7 @@ export {
     combSort,
     oddEvenSort,
     shuttleSort,
-    heapSort
+    heapSort,
+    timSort
 };
 

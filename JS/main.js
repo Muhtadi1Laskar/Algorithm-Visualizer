@@ -8,7 +8,8 @@ import {
     combSort,
     oddEvenSort,
     shuttleSort,
-    heapSort
+    heapSort,
+    timSort
 } from './Algorithms/Sorting/sortingAlgorithms.js';
 import { codeSnippets } from './Static-Algorithms/sorting.js';
 
@@ -109,6 +110,9 @@ function play() {
         case "heap":
             moves = heapSort(copy);
             break;
+        case "tim":
+            moves = timSort(copy);
+            break;
     }
 
     animateMoves(moves);
@@ -131,13 +135,14 @@ function animateMoves(moves) {
         const [i, j] = move.indices;
         [array[i], array[j]] = [array[j], array[i]];
         renderBars([i, j]);
-    } else if (move.type === "set") {
+    } else if (move.type === "set" || move.type === "overwrite") {
         array[move.index] = move.value;
         renderBars([move.index]);
     }
 
     currentTimeout = setTimeout(() => animateMoves(moves), speed);
 }
+
 
 const renderCode = () => {
     const algo = algoSelect.value;

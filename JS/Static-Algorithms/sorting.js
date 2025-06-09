@@ -8,6 +8,7 @@ import { oddEvenSort } from "./oddEvenSort.js";
 import { partition, quickSort, quickSortHelper } from "./quickSort.js";
 import { selectionSort } from "./selectionSort.js";
 import { shuttleSort } from "./shuttleSort.js";
+import { MIN_MERGE, minRunLength, timSort } from "./timSort.js";
 
 export const codeSnippets = {
   bubble: `${bubbleSort}`,
@@ -19,5 +20,6 @@ export const codeSnippets = {
   'odd-even': `${oddEvenSort}`,
   gnome: `${gnomeSort}`,
   shuttle: `${shuttleSort}`,
-  heap: `${heapSort} \n \n ${heapify}`
+  heap: `${heapSort} \n \n ${heapify}`,
+  tim: `const MIN_MERGE = ${MIN_MERGE} \n\n ${timSort} \n\n ${minRunLength} \n\n ${insertionSort} \n\n ${merge}`
 };
