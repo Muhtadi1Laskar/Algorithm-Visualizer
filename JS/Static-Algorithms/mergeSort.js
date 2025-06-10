@@ -1,27 +1,27 @@
 export function merge(left, right) {
-        let merged = [];
-        let i = 0;
-        let j = 0;
+    let merged = [];
+    let i = 0;
+    let j = 0;
 
-        while (i < left.length && j < right.length) {
-            if (left[i] <= right[j]) {
-                merged.push(left[i]);
-                i += 1;
-            }
-            else {
-                merged.push(right[j]);
-                j += 1;
-            }
-        }
-        while (i < left.length) {
+    while (i < left.length && j < right.length) {
+        if (left[i] <= right[j]) {
             merged.push(left[i]);
-            i++;
+            i += 1;
         }
-        while (j < right.length) {
+        else {
             merged.push(right[j]);
-            j++;
+            j += 1;
         }
-        return merged;
+    }
+    while (i < left.length) {
+        merged.push(left[i]);
+        i++;
+    }
+    while (j < right.length) {
+        merged.push(right[j]);
+        j++;
+    }
+    return merged;
 }
 
 export function mergeSort(array) {
