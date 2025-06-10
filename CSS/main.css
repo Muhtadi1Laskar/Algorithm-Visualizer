@@ -109,21 +109,25 @@ button:active {
 .bar {
   flex: 1;
   margin: 0 2px;
-  background: #00BFA6; /* Default: Calm teal */
+  background: #00BFA6;
+  /* Default: Calm teal */
   transition: height 0.3s, background-color 0.2s;
   border-radius: 2px;
 }
 
 .bar.blue {
-  background-color: #2979FF !important; /* Comparison */
+  background-color: #2979FF !important;
+  /* Comparison */
 }
 
 .bar.red {
-  background-color: #F44336 !important; /* Swap */
+  background-color: #F44336 !important;
+  /* Swap */
 }
 
 .bar.green {
-  background-color: #4CAF50 !important; /* Sorted */
+  background-color: #4CAF50 !important;
+  /* Sorted */
 }
 
 
@@ -267,10 +271,12 @@ body {
     transform: translateY(0);
     background-color: #e74c3c;
   }
+
   30% {
     transform: translateY(-10px);
     background-color: #f1948a;
   }
+
   100% {
     transform: translateY(0);
     background-color: #e74c3c;
