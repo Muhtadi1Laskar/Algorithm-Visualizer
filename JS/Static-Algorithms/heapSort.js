@@ -1,5 +1,4 @@
 export function heapSort(arr) {
-    const moves = [];
     const n = arr.length;
 
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
@@ -8,7 +7,6 @@ export function heapSort(arr) {
 
     for (let i = n - 1; i > 0; i--) {
         [arr[0], arr[i]] = [arr[i], arr[0]];
-        moves.push({ type: "swap", indices: [0, i] });
 
         heapify(arr, i, 0, moves);
     }
