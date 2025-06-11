@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Algorithm Visualizer</title>
-    <link rel="shortcut icon" href="./resources/sort.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./resources/sort.png" type="image/x-icon" />
     <!-- Prism CSS Theme -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Prism Core JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
@@ -47,8 +49,14 @@
           <option value="50">50 frame per rate</option>
           <option value="100">100 frame per rate</option>
         </select>
-        <input placeholder="Sorting Numbers" id="sorting-number" class="sorting-number" type="number" max="200"
-          min="5" />
+        <input
+          placeholder="Sorting Numbers"
+          id="sorting-number"
+          class="sorting-number"
+          type="number"
+          max="200"
+          min="5"
+        />
         <button id="reset-btn">Reset</button>
         <button id="sort-btn">Sort</button>
         <div class="theme-toggle">
@@ -56,8 +64,8 @@
         </div>
       </div>
 
-      <div id="container" class="bars" style="visibility: hidden;"></div>
-      <div class="code" id="code" style="visibility: hidden;">
+      <div id="container" class="bars" style="visibility: hidden"></div>
+      <div class="code" id="code" style="visibility: hidden">
         <pre><code class="language-javascript" id="code-block" ></code></pre>
       </div>
       <footer>
@@ -67,5 +75,4 @@
 
     <script type="module" src="JS/main.js"></script>
   </body>
-
 </html>
